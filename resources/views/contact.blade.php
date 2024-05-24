@@ -1,13 +1,13 @@
 <x-layout>
 
     <x-slot:title>
-        {{ $dir }} Page | {{ $pageName }}
+        {{ $Nav}} Page | {{ $Name }}
     </x-slot:title>
 
     <x-slot:headings>
-         {{ $dir }} | {{ $pageName }}!
+        Welcome to {{ $Name }}!
     </x-slot:headings>
 
-    This is the  {{ $pageName }} {{ $dir }} Page
+    This is the {{ $Nav}} Page
 
 </x-layout>

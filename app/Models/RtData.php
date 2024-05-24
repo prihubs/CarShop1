@@ -36,3 +36,64 @@ class RtData
     }
 
 }
+
+class Cars
+{
+    public static function Motor(): array{
+        return [
+            [
+                "id" => 1,
+                "Name" => "Lambogini",
+                "Type" => "Smart Car",
+                "Color" => "Red",
+                "Model" => "Rvx",
+                "Year" => "3030",
+                "Status" => "Available"
+            ],
+
+            [
+                "id" => 2,
+                "Name" => "Hyunder",
+                "Type" => "Smart Car",
+                "Color" => "Blue",
+                "Model" => "Rvx",
+                "Year" => "3232",
+                "Status" => "Available"
+            ],
+
+            [
+                "id" => 3,
+                "Name" => "Volkswagen",
+                "Type" => "Smart Car",
+                "Color" => "Green",
+                "Model" => "Rvx",
+                "Year" => "3012",
+                "Status" => "Available"
+            ],
+
+            [
+                "id" => 4,
+                "Name" => "Cambry",
+                "Type" => "Big daddy",
+                "Color" => "White",
+                "Model" => "Rvx",
+                "Year" => "2099",
+                "Status" => "Unavailable"
+            ]
+        ];
+    }
+
+    public static function AllCars(): array
+    {
+        $Cars = static::Motor();
+
+        return $Cars;
+    }
+
+    public static function Car(int $id): array
+    {
+        $Car = Arr::first(static::AllCars(), fn($Cars) => $Cars['id'] == $id);
+
+        return $Car;
+    }
+}
