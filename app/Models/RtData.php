@@ -75,7 +75,7 @@ class Cars
                 "id" => 4,
                 "Name" => "Cambry",
                 "Type" => "Big daddy",
-                "Color" => "White",
+                "Color" => "Yellow",
                 "Model" => "Rvx",
                 "Year" => "2099",
                 "Status" => "Unavailable"
