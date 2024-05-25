@@ -8,18 +8,21 @@ use App\Models\Cars;
         return $Store;
     }
 
-    function sNav($page){
-        $Store = RtData::find($page);
+    function sNav($shop){
+        $Store = RtData::findShop($shop);
         return $Store;
     }
 
     function AllCars(){
-        $Cars = Cars::AllCars();
+        $Cars = Cars::All();
         return $Cars;
     }
 
     function singleCar($id){
-        $Cars = Cars::Car($id);
+        $Car = Cars::Car($id);
 
-        return $Cars;
+        // foreach ($Car as $Cars){
+        //     return [ $Cars ];
+        // }
+        return $Car;
     }

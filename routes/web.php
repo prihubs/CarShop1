@@ -35,7 +35,7 @@ Route::get('/cars', function(){
     $Nav = sNav("Nav")[3];
     $Cars = AllCars();
 
-    return view('home', [
+    return view('cars', [
         "Name" => $Name,
         "Nav" => $Nav,
         "Cars" => $Cars
@@ -45,8 +45,10 @@ Route::get('/cars', function(){
 Route::get('/car/{id}', function($id){
 
     $Name = sName('type')["Title"];
-    $Nav = sName('Nav')[4];
+    $Nav = sNav("Nav")[4];
     $Car = singleCar($id);
+    // dd($Car);
+    // $Car = singleCar($id);
 
     return view('car', [
         "Name" => $Name,

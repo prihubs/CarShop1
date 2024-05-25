@@ -1,14 +1,14 @@
 <x-layout>
 
     <x-slot:title>
-        {{ $Nav}} Page | {{ $Name }}
+        {{$Nav}} Page | {{ $Name }}
     </x-slot:title>
 
     <x-slot:headings>
         Welcome to {{ $Name }}!
     </x-slot:headings>
 
-    This is the {{ $Nav }} Details
+    This is the {{$Nav}} Details
     <?php $color = strtolower($Cars['Color']); ?>
 
         <div class="px-10 py-10 mr-5 mb-10 w-50 bg-gray-500 text-{{$color}}-300">
@@ -19,6 +19,7 @@
                 <strong> Model: </strong>  {{   $Cars['Model'] }} <br>
                 <strong> Year: </strong>   {{   $Cars['Year'] }} <br>
                 <strong> Status: </strong> {{   $Cars['Status'] }} <p> <br> </p>
+                <div class="px-6 py-6 mr-5 mb-10 w-50 bg-gray-500 bg-{{$color}}-300 text-gray-500"> <strong> {{ $Cars['Cost'] }} </strong></div>
         </div>
 
 </x-layout>
